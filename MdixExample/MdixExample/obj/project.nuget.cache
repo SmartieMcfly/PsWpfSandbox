@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "yyP6FrLNRLNvbrQdFNTLGmZfpMZC17lbNnHEaFRZtSXUdII33qqLl3oHUVrYgTqcJkA/xfP/Gn9wBRJs6JJnIQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\smcollier\\Source\\GitHub\\PsWpfSandbox\\MdixExample\\MdixExample\\MdixExample.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\smcollier\\.nuget\\packages\\materialdesigncolors\\2.0.9\\materialdesigncolors.2.0.9.nupkg.sha512",
+    "C:\\Users\\smcollier\\.nuget\\packages\\materialdesignthemes\\4.6.1\\materialdesignthemes.4.6.1.nupkg.sha512"
+  ],
+  "logs": []
+}
