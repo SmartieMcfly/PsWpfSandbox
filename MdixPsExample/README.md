@@ -10,7 +10,10 @@ This code uses ideas and code from <https://github.com/DrHalfBaked/PowerShell.Ma
 
 ## Assemblies
 
-Build output taken from `C:\Users\smcollier\Source\OpenSource\MaterialDesignInXamlToolkit\MaterialDesign3.Demo.Wpf\bin\Debug\netcoreapp3.1`
+Publish MaterialDesignThemes.Wpf to a single file
 
-- MaterialDesignColors.dll
-- MaterialDesignThemes.Wpf.dll
+![](.\Resources\Assets\Publish.png)
+
+With these settings
+
+![](.\Resources\Assets\PublishSettings.png)

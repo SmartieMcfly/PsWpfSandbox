@@ -1,7 +1,8 @@
 #---[ Script Vars ]---#
 $MyTitle = "Example"
 $MyVersion = "0.1.0"
-$MyRoot = Get-Item -Path "C:\Users\smcollier\Source\GitHub\PsWpfSandbox\MdixExample"
+$MyRoot = Get-Item -Path "C:\Users\smcollier\Source\GitHub\PsWpfSandbox\MdixPsExample"
+Set-Location $MyRoot
 <# Debug:
 $MyRoot = Get-Item -Path $PSScriptRoot
 #>
@@ -17,11 +18,6 @@ $LayoutPath   = Join-Path -Path $ResourcePath -ChildPath "Layouts"
 Add-Type -AssemblyName PresentationFramework
 Add-Type -Path "$($AssemblyPath)\MaterialDesignThemes.Wpf.dll"
 Add-Type -Path "$($AssemblyPath)\MaterialDesignColors.dll"
-# [Void][System.Reflection.Assembly]::LoadWithPartialName('presentationframework')
-# [Void][System.Reflection.Assembly]::LoadFrom("$ResourcePath\MaterialDesignThemes.Wpf.dll")
-# [Void][System.Reflection.Assembly]::LoadFrom("$ResourcePath\MaterialDesignColors.dll")
-
-
 
 
 #---[ Theme ]---#
@@ -49,14 +45,8 @@ $ConfigFile = Join-Path -Path $ResourcePath -ChildPath "Config.xml"
 $Config = Open-File -Path $ConfigFile -FileType xml
 
 #---[ Load Layout ]---#
-# $MainWindowFile = Join-Path -Path $LayoutPath -ChildPath "Example13.xaml"
-$MainWindowFile = "C:\Users\smcollier\Source\OpenSource\PowerShell.MaterialDesign\Example13.xaml"
-try {
-    $Window = New-Window -XamlFile $MainWindowFile
-} catch {
-    Write-Output $_.Exception.Message
-}
-
+$MainWindowFile = Join-Path -Path $LayoutPath -ChildPath "MainWindow.xaml"
+$Window = New-Window -XamlFile $MainWindowFile
 Set-Theme -Window $Window -PrimaryColor $Config.Parameters.Settings.Theme.PrimaryColor -SecondaryColor $Config.Parameters.Settings.Theme.SecondaryColor -ThemeMode $Config.Parameters.Settings.Theme.Mode
 
 #---[ Component Config ]---#
